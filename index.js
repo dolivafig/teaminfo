@@ -54,8 +54,6 @@ inquirer.prompt([
 qEngineer();
     } else if (response.team_list === "Intern") {
 qIntern();
-    } else {
-        return;
     }
 
 //     fs.writeFile('./dist/team.html', `bla bla`, (err) =>
