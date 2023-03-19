@@ -47,17 +47,77 @@ inquirer.prompt([
         message: 'Want to add someone else to your team?',
         name: 'team_list',
         choices: ['Engineer', 'Intern', 'Exit Application']
+    },
+    {
+        type: 'input',
+        message: 'What is the engineers name?',
+        name: 'engineer_name',
+        when: (prompt) => prompt.team_list == 'Engineer',
+
+    },
+    {
+        type: 'input',
+        message: 'What is their ID number?',
+        name: 'eng_id_number',
+        when: (prompt) => prompt.team_list == 'Engineer',
+
+    },
+    {
+        type: 'input',
+        message: 'What is their email address?',
+        name: 'eng_email_address',
+        when: (prompt) => prompt.team_list == 'Engineer',
+
+    },
+    {
+        type: 'input',
+        message: 'What is their github username?',
+        name: 'github_username',
+        when: (prompt) => prompt.team_list == 'Engineer',
+    },
+    {
+        type: 'input',
+        message: 'What is the interns name?',
+        name: 'intern_name',
+        when: (prompt) => prompt.team_list == 'Intern',
+
+    },
+    {
+        type: 'input',
+        message: 'What is your ID number?',
+        name: 'int_id_number',
+        when: (prompt) => prompt.team_list == 'Intern',
+
+    },
+    {
+        type: 'input',
+        message: 'What is your email address?',
+        name: 'int_email_address',
+        when: (prompt) => prompt.team_list == 'Intern',
+
+    },
+    {
+        type: 'input',
+        message: 'What is the name of your school?',
+        name: 'int_school',
+        when: (prompt) => prompt.team_list == 'Intern',
+
     }
 ]).then((response) => {
+const manager = new Manager (response.manager_name, response.id_number, response.email_address, response.office_number);
+const engineer1 = new Engineer (response.engineer_name, response.eng_id_number, response.eng_email_address, response.github_username);
+const intern1 = new Intern (response.intern_name, response.int_id_number, response.int_email_address, response.int_school);
 
-    if (response.team_list === "Engineer") {
+    if (response.team_list == "Engineer") {
 qEngineer();
-    } else if (response.team_list === "Intern") {
+console.log(manager)
+    } else if (response.team_list == "Intern") {
 qIntern();
+console.log("test2")
     }
 
-//     fs.writeFile('./dist/team.html', `bla bla`, (err) =>
-//         err ? console.error(err) : console.log('Commit logged!'))
+    fs.writeFile('./test.txt', `${manager} bla`, (err) =>
+        err ? console.error(err) : console.log('Commit logged!'))
 })
 
 
@@ -65,22 +125,22 @@ function qEngineer() {
     inquirer.prompt([
         {
             type: 'input',
-            message: 'What is your name?',
+            message: 'What is the engineers name?',
             name: 'engineer_name',
         },
         {
             type: 'input',
-            message: 'What is your ID number?',
+            message: 'What is their ID number?',
             name: 'eng_id_number',
         },
         {
             type: 'input',
-            message: 'What is your email address?',
+            message: 'What is their email address?',
             name: 'eng_email_address',
         },
         {
             type: 'input',
-            message: 'What is your github username?',
+            message: 'What is their github username?',
             name: 'github_username',
         }
     ]).then((response) => {
@@ -92,7 +152,7 @@ function qIntern() {
     inquirer.prompt([
         {
             type: 'input',
-            message: 'What is your name?',
+            message: 'What is the interns name?',
             name: 'intern_name',
         },
         {
