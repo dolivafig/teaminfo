@@ -190,10 +190,11 @@ function checklist (){
             qIntern();
             console.log('intern')
         } else {
+
         let mgr = employees[0].getTemplate();
         let engineer1 = employees[1].getTemplate();
         let intern1 = employees[2].getTemplate();
-
+if(engineer1 = null) {append(mgr)}
         append(mgr, engineer1, intern1);
 
             return option;
