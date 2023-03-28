@@ -1,4 +1,4 @@
-### My Team
+### My Team Profile Generator
 
 ## Description
 
@@ -30,3 +30,5 @@ THEN I am prompted to enter the intern’s name, ID, email, and school, and I am
 WHEN I decide to finish building my team
 THEN I exit the application, and the HTML is generated
 Mock-Up
+
+### Click [here](https://drive.google.com/file/d/1UTAvwm4WVp9O6VeuxApDWVfLtA9tbwuc/view) to watch a short video of the application working and how to use it.
