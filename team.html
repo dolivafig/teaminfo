@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Team</title>
+</head>
+<style>
+body {background-color: rgb(223, 217, 217);
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+margin: auto;
+width: 400px;
+height: auto;
+text-align: center;
+flex-direction: column;
+}
+
+h1   {color: black;
+    justify-items: center;
+}
+p    {color: red;}
+ul   {list-style-type: none;}
+
+.container {display: flex;
+justify-items: center;}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 3px;
+    background-color: beige;
+    padding: 4px;
+    flex-wrap: wrap;
+    width: auto;
+    height: auto;
+    text-align: left;
+    border: 3px solid black;
+}
+.card li {
+    margin:2px;
+    font-size: 20px;
+}
+h2   {color: blue;
+margin: 2px;
+text-align: left;}
+</style>
+<body>
+    <h1 id="title" >Your Team</h1>
+    <div class = "card" id="manager"> 
+    <h2 id="role"> Manager </h2>
+    <ul>
+    <li>Name: Daniel Oliva</li>
+    <li>Employee ID: 1</li>
+    <li>Contact: <a href="mailto:dolivafigueroa@gmail.com">dolivafigueroa@gmail.com</a></li>
+    <li>Office No. 22</li>
+    </ul>
+    </div> <div class = "card" id="engineer"> 
+    <h2 id="role"> Engineer </h2>
+    <ul>
+    <li>Name: Pedro Garza</li>
+    <li>Employee ID: 2</li>
+    <li>Contact: <a href="mailto:pedro.garza@gmail.com">pedro.garza@gmail.com</a> </li>
+    <li> <a href="https://github.com/dolivafig">Github User: dolivafig</a> </li>
+    </ul>
+    </div> <div class = "card" id="intern"> 
+    <h2 id="role"> Intern </h2>
+    <ul>
+    <li>Name: Juan Perez</li>
+    <li>Employee ID: 3</li>
+    <li>Contact: <a href="mailto:juan.perez@gmail.com">juan.perez@gmail.com</a></li>
+    <li>School Name:  Florida Institute of Technology</li>
+    </ul>
+    </div>
+</body>
+</html>

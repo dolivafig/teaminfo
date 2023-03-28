@@ -15,10 +15,10 @@ getTemplate () {
     return `<div class = "card" id="engineer"> 
     <h2 id="role"> ${this.getRole()} </h2>
     <ul>
-    <li>${this.name}</li>
+    <li>Name: ${this.name}</li>
     <li>Employee ID: ${this.id}</li>
-    <li> <a href="mailto:${this.email}">Contact: ${this.email}</a> </li>
-    <li> <a href="https://github.com/${this.getGithub()}">Github user: ${this.getGithub()}</a> </li>
+    <li>Contact: <a href="mailto:${this.email}">${this.email}</a> </li>
+    <li> <a href="https://github.com/${this.getGithub()}">Github User: ${this.getGithub()}</a> </li>
     </ul>
     </div>`
 }

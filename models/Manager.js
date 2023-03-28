@@ -15,9 +15,9 @@ getTemplate () {
     return `<div class = "card" id="manager"> 
     <h2 id="role"> ${this.getRole()} </h2>
     <ul>
-    <li>${this.name}</li>
+    <li>Name: ${this.name}</li>
     <li>Employee ID: ${this.id}</li>
-    <li> <a href="mailto:${this.email}">Contact: ${this.email}</a></li>
+    <li>Contact: <a href="mailto:${this.email}">${this.email}</a></li>
     <li>Office No. ${this.getOffice()}</li>
     </ul>
     </div>`
